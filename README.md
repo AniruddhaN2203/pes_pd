@@ -7,7 +7,7 @@
 # Contents
 ## Day 1
 - [SoC Design and OpenLANE](#soc-design-and-openlane)
-
+- [Getiing Familiar with the Open Source EDA Tools](#getting-familiar-with-the-open-source-eda-tools)
 
 
 
@@ -42,5 +42,43 @@ A simplified RTL to GDSII Flow is :
 
 ![Screenshot from 2023-09-10 23-56-09](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/b1bbef29-0748-4fd7-acf8-8c421d599aca)
 
+## Getiing Familiar with the Open Source EDA Tools
+
+### Design Preparation Step
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/765e24e4-31bc-454c-8c2f-419978b74e08)
+- Let us first go the the working directory using the following commands
+```
+cd Desktop/work/tools/
+```
+
+```
+cd openlane_working_dir/openlane/
+```
+- We now type the command ```docker```.
+- This will open the shell as shown in the figure above
+- Now we type
+```
+./flow.tcl -interactive
+```
+- If the 'interactive' keyword is not present, then the entire flow of the tool is run.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7c205c9e-58f2-43e1-835e-c73ca47c0ff4)
+
+- Now we must import all the packages required to run the flow, we use the command:
+```
+package require openlane 0.9
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c7a07b4a-f833-4696-a2cd-c19cfe4a6b77)
+- We will be working with the 'picorv32a' design.
+- The src folder has the verilog file and the sdc file of the design
+- Now we do the design setup stage using the command:
+```
+prep -design picorv32a
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/e268e6aa-28dc-465e-8a44-5c7c49b7eec1)
+- After preparing the design, we can see that a new 'runs' folder is created.
 
 
