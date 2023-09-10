@@ -98,3 +98,5 @@ No. of flops/No. of cells = 1613/14876 = 0.108
 ```
 - In percentage there is 10.8% of the total number of cells are Flops
 
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fa830470-1b1d-4074-a710-8398db096aab)
+- Under the runs folder we can check out the netlist file generated after synthesis
