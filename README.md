@@ -42,7 +42,7 @@ A simplified RTL to GDSII Flow is :
 
 ![Screenshot from 2023-09-10 23-56-09](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/b1bbef29-0748-4fd7-acf8-8c421d599aca)
 
-## Getiing Familiar with the Open Source EDA Tools
+## Getting Familiar with the Open Source EDA Tools
 
 ### Design Preparation Step
 
@@ -81,4 +81,20 @@ prep -design picorv32a
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/e268e6aa-28dc-465e-8a44-5c7c49b7eec1)
 - After preparing the design, we can see that a new 'runs' folder is created.
 
+- To synthesize the design we type
+```
+run_synthesis
+```
+- This command invokes yosys, runs the synthesis and the abc commands.
+- A long process is observed after typing this command, which for a little over two mintues.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7a3d0687-8a0e-4754-bf53-7bbdf6bd3a71)
+- A synthesis successful message must be displayed.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c0747e9d-b9ef-4609-ac75-005bb8fc46b6)
+- The flop ratio can be calculated by using:
+```
+No. of flops/No. of cells = 1613/14876 = 0.108
+```
+- In percentage there is 10.8% of the total number of cells are Flops
 
