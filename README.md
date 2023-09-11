@@ -10,7 +10,7 @@
 - [Getiing Familiar with the Open Source EDA Tools](#getting-familiar-with-the-open-source-eda-tools)
 
 ## Day 2
-- [Chip Floor Planning Considerations](chip-floor-planning-considerations)
+- [Chip Floor Planning Considerations](#chip-floor-planning-considerations)
 
 
 
@@ -131,3 +131,29 @@ Utilization Factor = Area Occupied by the Netlist/Total Area of the Core
 - The 'Aspect Ratio = Height/Width = 1'.
 
 **Concept of Pre Placed Cells**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/ce3ce1b6-578f-4910-924c-d712f174e809)
+- We take the above combinational logic as an example
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a9cd2668-26b2-41ec-9c04-cb5b1d85f2a5)
+- We split the circuit into two parts, block 1 and block 2 as shown above
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/6a468eae-b0f1-4eb7-ad74-0ba8ba42626d)
+- We extend the I/O pins and black box the boxes.
+- Now we separate the boxes and the get their respective I/O ports.
+- The use of doing this is that the users can use the blocks multiple times and form the required final circuit with ease.
+- They only need to implement the design once and it can be reused.
+- These kind of IPs have user defined locations and are placed in the chip before automated placement and routing takes place. These are called pre-placed cells.
+
+**Surrounding Pre-Placed Cells with Decoupling Capacitors**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/10b42d05-a8a2-4a44-bd0c-08102b608e38)
+
+- Huge capacitor filled with charge. The equivalent voltage across the capacitor is similar to what the power supply produces.
+- We add the capacitor in parallel to the circuit.
+- Everytime the circuit switches it draws current from the decoupling capacitor, whereas the outer network with the power supply and other componets is used to re-charge the capacitor
+
+**Pin Placement**
+- In pin placemnt step we use the HDL netlist to determine where a specific pin should be placed in the circuit.
+- We join the common pins and try to keep the connections as effecient as possible.
+- Pins are placed in the Die area.
