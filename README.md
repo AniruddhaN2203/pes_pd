@@ -9,7 +9,8 @@
 - [SoC Design and OpenLANE](#soc-design-and-openlane)
 - [Getiing Familiar with the Open Source EDA Tools](#getting-familiar-with-the-open-source-eda-tools)
 
-
+## Day 2
+- [Chip Floor Planning Considerations](chip-floor-planning-considerations)
 
 
 
@@ -100,3 +101,33 @@ No. of flops/No. of cells = 1613/14876 = 0.108
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fa830470-1b1d-4074-a710-8398db096aab)
 - Under the runs folder we can check out the netlist file generated after synthesis
+
+# Day 2
+## Chip Floor Planning Considerations
+
+**Utilization Factor and Aspect Ratio**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a1812369-af71-48c4-860c-f76af506400e)
+- We consider a simple netlist with a Launch and Capture Flop. It also has an AND and OR gate.
+- We then convert it into squares since we need appropriate dimensions
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/f7148664-ea48-420e-92a6-b5ef5ebc30fd)
+- Let us consider the areas of the gates and Flops as 1 sq unit
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/6b3f5692-c22e-4c21-857d-d689adf834f0)
+- Clubbing them together we get an area of 4 sq units
+
+- The 'core' section of a chip is where the fundamental logic design is placed.
+- The 'die' area contains the core and is a small semiconductor are on which the fundamental circuit is fabricated.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/b2c4dbb6-2b0c-477c-9696-a5fe90c282ef)
+- Now we put the netlist in the 'core' area and check the utilization.
+- Here
+```
+Utilization Factor = Area Occupied by the Netlist/Total Area of the Core
+```
+- As we can see here, there is 100% utilization and ```Utilization Factor = 1```.
+- In practical scenarios we don't go for such a high utilization factor.
+- The 'Aspect Ratio = Height/Width = 1'.
+
+**Concept of Pre Placed Cells**
