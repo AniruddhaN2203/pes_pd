@@ -157,3 +157,7 @@ Utilization Factor = Area Occupied by the Netlist/Total Area of the Core
 - In pin placemnt step we use the HDL netlist to determine where a specific pin should be placed in the circuit.
 - We join the common pins and try to keep the connections as effecient as possible.
 - Pins are placed in the Die area.
+
+**Steps to run FLoorplan using OpenLANE**
+
+
