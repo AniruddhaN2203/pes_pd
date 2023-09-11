@@ -160,4 +160,38 @@ Utilization Factor = Area Occupied by the Netlist/Total Area of the Core
 
 **Steps to run FLoorplan using OpenLANE**
 
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4263c922-01d5-4806-afab-2d81ebbb73e8)
 
+- To open the Floorplan we go to the required directory that is
+```
+vsduser@vsdsquadron:~/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/11-09_15-36/results/floorplan
+```
+using the ```cd``` command.
+
+- Then we type the command:
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.floorplan.def &
+```
+
+- The following layout is displayed
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c3eeadc7-821f-45ce-b077-7702623e25bf)
+- We can press 's' and then 'v' to align the design to the center of the screen.
+
+- We can right click on the mouse and pess 'z' to zoom into a desired part.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/3d251ffe-c125-41be-a96e-00f2391b89fb)
+- We can see here that the I/O ports are equidistant
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/2b79ae12-8c15-44e1-b800-48981f3fc442)
+- We can check the details of the ports as follows
+  - Hover over a port with your crosshair and press 's' on your keyboard
+  - Now open the tkcon command window and type ```what```.
+  - This will show you the details of the selected port.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/2ee6d6b3-a7e9-415b-b2dd-1271d16dac2c)
+- If we zoom in a little more, we can see the tap cells.
+- They are present to prevent latch up conditions which occur in the CMOS devices
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7e726389-8a96-4572-b6a7-59d5eb0d821a)
+- These are the standard cells that are used in the design
