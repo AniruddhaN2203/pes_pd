@@ -234,7 +234,7 @@ in the OpenLANE shell.
 - This is the result displayed. As we can see the '/picorv32a.placement.def' file is read.
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/0adbe3c9-fe26-4770-9eb0-1ed9ca581402)
--We move one directory up from the 'floorplan' folder using
+- We move one directory up from the 'floorplan' folder using
 ```
 cd ../placement/
 ```
