@@ -13,6 +13,7 @@
 ## Day 2
 - [Chip Floor Planning Considerations](#chip-floor-planning-considerations)
 - [Library Binding and Placement](#library-binding-and-placement)
+- [Cell Design and Characterization Flow](#cell-design-and-characterization-flow)
 
 
 
@@ -249,3 +250,37 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/2a7cce9b-9550-4eaf-922e-8a64306f05ac)
 - If we zoom in we can see the placement of the standard cells in the standard cell rows.
+
+## Cell Design and Characterization Flow
+
+**Cell Design Flow**
+- Inputs -> Process design kits(PDKs) : DRC and LVS rules, SPICE models, library and user-defined specs.
+- Design Steps -> Circuit Design, Layout Design(Euler Path and Stick Diagram), Characterization.
+- Outputs -> CDL(Circuit Description Language), GDSII, LEF, extracted spice netlist(.cir)
+
+**Characterization Flow**
+- This is for an inverter.
+1) Read the model files.
+2) Read the extracted SPICE netlist.
+3) Recognize the behaviour of the buffer.
+4) Attaching the necessary power sources
+5) Apply the stimulus, which is the input signal to the circuit.
+6) Read the sub-circuit of the inverter.
+7) Provide necessary output capacitances.
+8) Provide the necessary simulation commands
+
+**Timing Characterization**
+- slew_low_rise_thr = 20%
+- slew_high_rise_thr = 80%
+- slew_low_fall_thr = 20%
+- slew_high_fall_thr = 80%
+- in_rise_thr = 50%
+- in_fall_thr = 50%
+- out_rise_thr = 50%
+- out_fall_thr = 50%
+
+- Propogation delay = time(out_fall_thr) - time(in_rise_thr)
+
+- Transition Time
+  - On rise: time(slew_high_rise_thr) - time(slew_low_rise_thr)
+  - On fall : time(slew_high_fall_thr) - time(slew_low_fall_thr)
