@@ -166,6 +166,11 @@ Utilization Factor = Area Occupied by the Netlist/Total Area of the Core
 - Pins are placed in the Die area.
 
 **Steps to run FLoorplan using OpenLANE**
+- To view floorplan we type
+```
+run_floorplan
+```
+in the OpenLANE shell.
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4263c922-01d5-4806-afab-2d81ebbb73e8)
 
@@ -217,3 +222,30 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 - The components of the netlist are placed in the core area.
 - They are placed according to the convenience of distance from the pins.
 - When sending signal from FF1 to FF2, according to the circuit requirements, there has to be a very fast propogation of signals. Hence, they are placed very close and buffers are added since there is a small delay for the signal from the pin to reach FF1. The buffers maintain signal integrity
+
+**Viewing the Placement**
+- To view the placement we type
+```
+run_placement
+```
+in the OpenLANE shell.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/56832e08-c84e-4c78-8a24-73e1b9bdb05f)
+- This is the result displayed. As we can see the '/picorv32a.placement.def' file is read.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/0adbe3c9-fe26-4770-9eb0-1ed9ca581402)
+-We move one directory up from the 'floorplan' folder using
+```
+cd ../placement/
+```
+- To view the placement design we use the command
+```
+magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/313098df-673a-466d-8cce-169a9932fcce)
+- The above is displayed.
+- All these standard cells were present at the initial layout of the floorplan.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/2a7cce9b-9550-4eaf-922e-8a64306f05ac)
+- If we zoom in we can see the placement of the standard cells in the standard cell rows.
