@@ -12,6 +12,7 @@
 
 ## Day 2
 - [Chip Floor Planning Considerations](#chip-floor-planning-considerations)
+- [Library Binding and Placement](#library-binding-and-placement)
 
 
 
@@ -201,3 +202,18 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7e726389-8a96-4572-b6a7-59d5eb0d821a)
 - These are the standard cells that are used in the design
+
+## Library Binding and Placement
+
+**Netlist Binding and Initial Place Design**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/9fbd1dd6-34b3-4b38-b92a-c56efe08311f)
+- In real life, the logic gates and cells do not have shapes, but are present in the form of rectangles and squares.
+- Hence they have dimensions to them and the space where they are placed must be utilized carefully
+- The above picture shows an example of a library.
+- Library consists of various kinds of cells which have different shapes and sizes, flavours and different timing information.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/adc000d3-4076-4c74-b6d3-96e3e10f311f)
+- The components of the netlist are placed in the core area.
+- They are placed according to the convenience of distance from the pins.
+- When sending signal from FF1 to FF2, according to the circuit requirements, there has to be a very fast propogation of signals. Hence, they are placed very close and buffers are added since there is a small delay for the signal from the pin to reach FF1. The buffers maintain signal integrity
