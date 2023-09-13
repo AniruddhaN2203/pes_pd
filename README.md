@@ -15,6 +15,11 @@
 - [Library Binding and Placement](#library-binding-and-placement)
 - [Cell Design and Characterization Flow](#cell-design-and-characterization-flow)
 
+## Day 3
+- [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
+
+
+
 
 
 
@@ -284,3 +289,17 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 - Transition Time
   - On rise: time(slew_high_rise_thr) - time(slew_low_rise_thr)
   - On fall : time(slew_high_fall_thr) - time(slew_low_fall_thr)
+
+# Day 3
+## Labs for CMOS inverter ngspice simulations
+**IO Placer Revision**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fabe5ca4-7dde-43f9-a8e4-260ed11ed820)
+- The following command can be typed to change the I/O pins placemnt configuration.
+
+**SPICE Deck Creation for CMOS Inverter**
+- SPICE Deck is a netlist that has information on:
+  - component connectivity 
+  - component values
+  - identifying the nodes
+  - giving a designation to the nodes
