@@ -381,4 +381,11 @@ ext2spice
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/443ea6b4-b82e-4db6-b2d5-5192904507bd)
 - We can see that a sky130_inv.spice file is created
 
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fcadbb47-849c-4d5f-a15d-4612fb015be6)
+- We need to open it and configure it to the above specifications
 ## Sky130 Tech File Labs
+- To start off we look at the minimum value of the layout window.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/6a5d5d43-94d8-4248-8681-5d8d94e924e4)
+- We can use 'g' on the keyboard to activate the grid and after selecting a grid by right clicking on the mouse, we type ```box``` in tkcon window to check the minimum value of the layout window.
+- 
