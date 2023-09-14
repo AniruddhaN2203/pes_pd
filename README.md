@@ -17,7 +17,7 @@
 
 ## Day 3
 - [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
-
+- [Inception of Layout and CMOS Fabrication Process](#inception-of-layout-and-cmos-fabrication-process)
 
 
 
@@ -297,6 +297,7 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fabe5ca4-7dde-43f9-a8e4-260ed11ed820)
 - The following command can be typed to change the I/O pins placemnt configuration.
 
+## Inception of Layout and CMOS Fabrication Process
 **SPICE Deck Creation for CMOS Inverter**
 - SPICE Deck is a netlist that has information on:
   - component connectivity 
@@ -376,3 +377,6 @@ ext2spice cthresh 0 rthresh 0 -> this is done to copy the parasitic capacitances
 ```
 ext2spice
 ```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/443ea6b4-b82e-4db6-b2d5-5192904507bd)
+- We can see that a sky130_inv.spice file is created
