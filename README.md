@@ -332,7 +332,7 @@ in the follwoing directory shown in the figure
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c0cefbbc-dfd8-40b0-859e-3603e5589416)
 
 **16 Mask CMOS Process**
-1) Selecting a Substrate
+1) Selecting a Substrate - Selecting the appropriate substrate to synthsize the design on.
 2) Creating active reagion for transistors - Adding layers of SiO2(40nm), Si3N4(80nm) and photoresist(1um). On top of the photoresist we put a mask layer. Pass UV light and remove the mask. Resist is removed. LOCOS(Local Oxidation of Silicon) is performed. Si3N4 is etched.
 3) N-Well and P-Well formation - The next masks are used to create the source and drain regions of the MOSFETs. Boron is used to make P-Well using ion implantation. Phosphorus is used to create N-Well. Put the MOSFET in a Drive In furnace.
 4) Formation of Gate - Gate formation involves depositing a gate oxide, defining gate patterns using photolithography, depositing gate material, etching to create gates, doping the substrate and insulating the gates.
@@ -342,3 +342,37 @@ in the follwoing directory shown in the figure
 8) Higher Level Metal Formation - Forming contacts and interconnects locally involves depositing a dielectric material like silicon dioxide, patterning it using photolithography, etching contact holes, depositing a barrier metal (e.g., titanium or titanium nitride), filling with a conductor (e.g., aluminum or copper) using chemical vapor deposition (CVD), and then planarizing through chemical-mechanical polishing (CMP).
 
 **Sky130 Basic Layers Layout and LEF using Inverter**
+- Now let us look at the layout of a CMOS inverter. To open this we type the command
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/f488e2ef-1afe-42a0-9028-835ae446a797)
+```
+ magic -T sky130A.tech sky130_inv.mag &
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4544d764-7b49-4b1f-b3d7-0ae61961bd81)
+- The following layout is displayed.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/f10146f9-71a2-4d15-b377-43a72034b9fc)
+- We can get to know the details of the inverter by hovering the mouse cursor over it and pressing 's' on the keyboard. Then we can type ```what``` in the tkcon.
+- Pressing 's' three times will show what parts are connected to the selected part.
+
+- We shall look at the difference between LEF and Layout. The above image is a Layout.
+- LEF represents abstract component data in a machine-readable format for IC libraries, while layout is the physical geometric arrangement of these components on a semiconductor chip.
+
+**Steps to Create Standard Cell Layout and Extract Spice Netlist**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/aa5b0d26-1711-4fb3-84ff-817ca929110f)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7a2bca47-28d8-4c2e-96cd-4fdcb983fcf0)
+- DRC errors can be viewed in the tkcon.
+
+To extract Spice Netlist we perform the following steps in the tkcon window:
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/deb99366-4eb3-40b6-8172-ecce6962db33)
+- We use the commands
+```
+ext2spice cthresh 0 rthresh 0 -> this is done to copy the parasitic capacitances
+```
+- The next command is
+```
+ext2spice
+```
