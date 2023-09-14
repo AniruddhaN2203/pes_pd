@@ -18,7 +18,7 @@
 ## Day 3
 - [Labs for CMOS inverter ngspice simulations](#labs-for-cmos-inverter-ngspice-simulations)
 - [Inception of Layout and CMOS Fabrication Process](#inception-of-layout-and-cmos-fabrication-process)
-
+- [Sky130 Tech File Labs](#sky130-tech-file-labs)
 
 
 
@@ -380,3 +380,5 @@ ext2spice
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/443ea6b4-b82e-4db6-b2d5-5192904507bd)
 - We can see that a sky130_inv.spice file is created
+
+## Sky130 Tech File Labs
