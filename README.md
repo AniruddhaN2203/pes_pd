@@ -382,6 +382,8 @@ ext2spice
 - We can see that a sky130_inv.spice file is created
 
 ## Sky130 Tech File Labs
+
+**Create Final SPICE Deck**
 - To start off we look at the minimum value of the layout window.
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/6a5d5d43-94d8-4248-8681-5d8d94e924e4)
@@ -393,3 +395,26 @@ ext2spice
 gedit sky130_inv.spice
 ```
 - We need to configure it to the above specifications.
+
+**Characterize Inverter using Sky130 Models**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/548d6ace-9d74-47f4-906f-4614c1babaca)
+- We now plot the graph for output vs input sweeping the time.
+- We first use the command
+```
+ngspice sky130_inv.spice
+```
+- In the ngspice shell we use the command
+```
+plot y vs time a
+```
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/b810d9fe-11e4-44f7-863c-ed19593e0b3c)
+- The following graph is displayed.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/400506ec-61c3-458c-9130-7147ec496c6a)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/55c43b65-5c02-451a-bb11-391de8d87571)
+- Rise Time -> time taken to rise from 20% to 80% of the max value -> 2.25075e-09 - 2.184e-09 = 0.006675e-09 s.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/93f95ac2-43e2-48de-93e1-07399e20b4b1)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fc3b2887-d910-4864-ae33-ef02fdb8035f)
+- Propogation Delay/Cell Rise Delay -> 2.21379e-09 - 2.15e-09 = 0.06379e-09 s.
