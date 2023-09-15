@@ -20,7 +20,7 @@
 - [Inception of Layout and CMOS Fabrication Process](#inception-of-layout-and-cmos-fabrication-process)
 - [Sky130 Tech File Labs](#sky130-tech-file-labs)
 
-
+## Day 4
 
 
 # Day 1
@@ -511,3 +511,5 @@ drc check
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4bc70446-9a20-47cd-95b9-d850e170887a)
 - Select the existing nwell.4 and make a copy of it by selecting it and clicking 'c'.
 - Now select a small area on the nwell.4 and add an 'nsubstratecontact' by hovering over it and clicking middle mouse button.
+
+# Day 4
