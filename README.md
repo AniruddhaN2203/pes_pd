@@ -441,3 +441,56 @@ tar xfz drc_tests.tgz
 ```
 - Do ```ls``` to view all the files in it.
 
+To open the software we type
+```
+magic -d XR
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/8571a471-4937-4b89-8197-99c2648dfa66)
+- We click 'file' and open the 'met3.mag' file.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/cbec69ce-fedb-41cd-af31-0dd9750c1ed9)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/b9551c50-a44b-472b-bf63-d4979c2f8caa)
+- If we select an area and type ```drc why``` in the tkcon wndow, it will show us the DRC error.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/53fdfab7-7d24-4638-9fb3-855589c89b83)
+- To add contact cuts to metal3, first select an area using left and right click. Then hovering over the m3contact we click middle mouse button.
+
+**Fixing DRC Errors**
+- There is a DRC error in the poly.mag file in 'poly.9'.
+- Open the sky130A.tech file in the editor and make the following changes
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/d786e946-95e0-42c8-a0bd-a83a57697e04)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4274217a-ba1b-499d-b81a-fa26b4262301)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/efafb2d3-520d-4405-b1ae-731b0308ac99)
+- Now open the tkcon window and type
+```
+load tech sky130A.tech
+drc check
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/ebd7630c-128d-46ba-adb7-a30169ba7fe6)
+- As we can see the error is fixed.
+
+**DRC Error as Geometrical Construct**
+- We open the nwell.mag file.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4c49e5c5-4738-449c-9df0-048d2034825d)
+- We type the above commands
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/40097614-0dfe-4479-b85c-4418e7b43787)
+- The following is displayed
+
+**Find Missing or Incorrect Rules and Fix Them**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/338b998a-9a6b-4485-8d2b-095fbbcf3d83)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/cc00bc2f-31ed-45b3-96d8-a12b28697bd4)
+- As we can see this is an incorrect implementation and the above rule is violated.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/d689590d-b9a7-43b2-b1da-72e95a9f4dcb)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/71d62451-245b-4010-8246-234727062c8b)
+- We make the following changes
