@@ -494,3 +494,20 @@ drc check
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/71d62451-245b-4010-8246-234727062c8b)
 - We make the following changes
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/08900ffa-8f91-4550-be8c-375b4cb42866)
+- Now we select the nwell.4 and type the following commands
+```
+tech load sky130A.tech
+drc check
+drc style drc(full)
+drc check
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/dbb58cd3-4845-4d28-a22b-0228b8260cf6)
+- As we can see the error still persists
+- We can fix it by the following method.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4bc70446-9a20-47cd-95b9-d850e170887a)
+- Select the existing nwell.4 and make a copy of it by selecting it and clicking 'c'.
+- Now select a small area on the nwell.4 and add an 'nsubstratecontact' by hovering over it and clicking middle mouse button.
