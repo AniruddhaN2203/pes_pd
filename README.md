@@ -420,3 +420,24 @@ plot y vs time a
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/fc3b2887-d910-4864-ae33-ef02fdb8035f)
 - Propogation Delay/Cell Rise Delay -> 2.21379e-09 - 2.15e-09 = 0.06379e-09 s.
+
+**Sky130 PDKS and Steps to Download Magic Tool**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/9f99bcfc-e79c-4c8b-afcf-27f3502b477f)
+- Enter the command
+```
+ wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz
+```
+
+- Move the file to desktop using
+```
+mv drc_tests.tgz Desktop/
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/dd984ca9-3692-43f1-b111-f90e5e7a4c08)
+- Extract the file using
+```
+tar xfz drc_tests.tgz 
+```
+- Do ```ls``` to view all the files in it.
+
