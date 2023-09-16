@@ -536,3 +536,25 @@ less tracks.info
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/026c5733-e48a-4454-8bed-82a3dd6e1697)
 - Having the ports at the intersection of horizontal and vertical tracks ensure that the route can reach that port from the 'y' as well as 'x' direction.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a1022ba3-b42d-4fed-987f-d4823c0e5550)
+- The next requirement is that the width of the cell should be the odd multiple of xpitch which is '0.46' as seen in the 'tracks.info' file.
+- As we can see it encloses two full boxes and two halves of one box, totally making three boxes as indicated by the white rectangle.
+
+**Convert Magic Layout to Standard Cell LEF**
+- In the tkcon window of the 'sky130_inv.mag' file we type
+```
+save sky130_vsdinv.mag
+```
+to make our own .mag file
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c5cbd3be-e520-4548-b863-51c211664688)
+- To make the .lef file we type
+```
+lef write
+```
+to make our own lef file.
+- Type ```less sky130_vsdinv.lef```.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4da168e6-7999-4a15-a973-03a767694c51)
+- The .lef file is as follows
