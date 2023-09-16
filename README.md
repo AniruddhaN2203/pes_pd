@@ -21,7 +21,7 @@
 - [Sky130 Tech File Labs](#sky130-tech-file-labs)
 
 ## Day 4
-
+- [Timing Modelling using Delay Tables](#timinng-modelling-using-delay-tables)
 
 # Day 1
 
@@ -513,3 +513,26 @@ drc check
 - Now select a small area on the nwell.4 and add an 'nsubstratecontact' by hovering over it and clicking middle mouse button.
 
 # Day 4
+## Timing Modelling using Delay Tables
+
+**Convert Grid Info to Track Info**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/0f4f84e4-2465-4275-b548-8c5f4fe3020a)
+- We must go to the following directory and type
+```
+less tracks.info
+```
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/3ff966c6-0567-4a44-8639-e128d040b188)
+- The 'tracks.info' file is used during the routing stage.
+- Routes are the metal traces.
+- Since the PNR is an automated flow, we need to specify where all we want the routes to go.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/15744b5a-0fc9-4ad5-b4ce-dfefd26e860d)
+- Now we converge the grid definition in the layout to track definition, by typing the following command
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/dbc80960-e5cb-4b75-9f8d-d30c0e48febb)
+- The following is the result.
+- This shows that the routing of 'li1' layer can happen only along this grid
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/026c5733-e48a-4454-8bed-82a3dd6e1697)
+- Having the ports at the intersection of horizontal and vertical tracks ensure that the route can reach that port from the 'y' as well as 'x' direction.
