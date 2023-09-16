@@ -21,7 +21,7 @@
 - [Sky130 Tech File Labs](#sky130-tech-file-labs)
 
 ## Day 4
-- [Timing Modelling using Delay Tables](#timinng-modelling-using-delay-tables)
+- [Timing Modelling using Delay Tables](#timing-modelling-using-delay-tables)
 
 # Day 1
 
