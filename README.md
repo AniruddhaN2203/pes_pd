@@ -554,7 +554,29 @@ to make our own .mag file
 lef write
 ```
 to make our own lef file.
+
 - Type ```less sky130_vsdinv.lef```.
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4da168e6-7999-4a15-a973-03a767694c51)
 - The .lef file is as follows
+
+**Steps to Include New Cell in Synthesis**
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a737393f-5802-4fcc-ac89-8fdbccec7307)
+- We copy the .mag file that we created to the 'src' folder of picorv32a folder.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7d6338d2-212a-40c7-853a-3054453f8d82)
+- We then perform this copy command.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a0690582-9f8b-45cd-935b-ef2a6d189aa5)
+- Next we modify the 'config.tcl' file in the picorv32a folder as follows.
+- Open the OpenLANE interactive window and retrieve the 0.9 package.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/3a2f63b7-48fa-40e8-aac4-f8bb3fc577ee)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c1724b52-b778-4e12-bc5a-6108490659c8)
+- Type the following
+```
+prep -design picorv32a -tag 16-09_19-58 -overwrite
+set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
+add_lefs -src $lefs 
+```
