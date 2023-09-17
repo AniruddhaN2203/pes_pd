@@ -22,6 +22,7 @@
 
 ## Day 4
 - [Timing Modelling using Delay Tables](#timing-modelling-using-delay-tables)
+- [Timing Analysis with Ideal Clocks using OpenSTA](#timing-analysis-with-ideal-clocks-using-opensta)
 
 # Day 1
 
@@ -601,3 +602,27 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 - The following is displayed.
 - Zooming into the design using 'z' we can see the sky130_vsdinv than we defined.
 - We have plugged in our custon cell in the OpenLANE flow.
+
+## Timing Analysis with Ideal Clocks using OpenSTA
+
+**Configure OpenSTA for Post-Synth Timing Analysis**
+- We must create two files
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c9867e29-810f-4aca-87cb-c71032f823e4)
+- The first one must be in the openlane directory
+- This file is known as the 'pre_sta.conf' file.
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/9e849dac-a4ff-4420-9a48-bf759f6c82e4)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/92bd662a-e176-41c3-afb5-a808630a1af8)
+- The second is the my_base.sdc file.
+- This should be in the 'src/sky130' directory under the picorv32a directory.
+
+- To run the timing analysis we type
+```
+sta pre_sta.conf
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/130dfd6a-d980-4cd8-99e0-4ca26d7cd32b)
+- Following result is displayed
+- There is a slack violation
