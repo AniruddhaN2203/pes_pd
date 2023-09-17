@@ -600,3 +600,4 @@ magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7fd1b736-d6dd-4a98-8567-1ee6d0cc5813)
 - The following is displayed.
 - Zooming into the design using 'z' we can see the sky130_vsdinv than we defined.
+- We have plugged in our custon cell in the OpenLANE flow.
