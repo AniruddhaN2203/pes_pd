@@ -571,12 +571,14 @@ to make our own lef file.
 - Next we modify the 'config.tcl' file in the picorv32a folder as follows.
 - Open the OpenLANE interactive window and retrieve the 0.9 package.
 
-![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/3a2f63b7-48fa-40e8-aac4-f8bb3fc577ee)
-
-![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/c1724b52-b778-4e12-bc5a-6108490659c8)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/2d3fb8cd-43e6-46c2-b2de-69a338320fe4)
 - Type the following
 ```
 prep -design picorv32a -tag 16-09_19-58 -overwrite
 set lefs [glob $::env(DESIGN_DIR)/src/*.lef]
 add_lefs -src $lefs 
 ```
+- Next we type ```run_synthesis```.
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/e3fdfe4f-0139-4bd1-8617-b9aa6c54d0e2)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/527db989-1cd9-403a-8b02-3028400befc0)
+- The following results are displayed.
