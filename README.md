@@ -657,9 +657,46 @@ read_lef /openLANE_flow/designs/picorv32a/runs/16-09_19-58/tmp/merged.lef
 ```
 read_def /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/cts/picorv32a.cts.def
 ```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/0e3199ee-c1dc-43fb-8097-0c688b685c48)
 - We then do
 ```
 write_db pico_cts.db
 read_db pico_cts.db
 read_verilog /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/synthesis/picorv32a.synthesis_cts.v
+read_liberty -max $::env(LIB_SLOWEST)
+read_liberty -max $::env(LIB_FASTEST)
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/4b35830f-9822-48c7-ab41-5bcfb1eea4f6)
+- We read the .src file.
+```
+read_sdc /openLANE_flow/designs/picorv32a/src/sky130/my_base.sdc
+```
+- We set the clock
+```
+set_propagated_clock [all_clocks]
+```
+- Checking the report
+```
+report_checks -path_delay min_max -format full_clock_expanded -digits 4
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/f637e66a-db20-4cb6-8b84-75c11267c0eb)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/184e7412-dc84-453c-b2f0-76b40e3588f4)
+- Above results are displayed
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7fd17b40-dfe1-4b1f-b597-fa5b5c911f74)
+- We perform it again for a more accurate result
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a563b159-c6bb-44ec-a44a-e406c16f5ed3)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/19435f73-e4c7-4663-9c21-0780cdd3f2a6)
+- Above results are displayed
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/0415b653-7c0b-478d-91c3-e70d0e94d654)
+```
+report_clock_skew -hold
+report clock_skew -setup
 ```
