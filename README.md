@@ -567,7 +567,7 @@ to make our own lef file.
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/7d6338d2-212a-40c7-853a-3054453f8d82)
 - We then perform this copy command.
 
-![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a0690582-9f8b-45cd-935b-ef2a6d189aa5)
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/acb2c280-ba86-4f84-947e-450fc242eee8)
 - Next we modify the 'config.tcl' file in the picorv32a folder as follows.
 - Open the OpenLANE interactive window and retrieve the 0.9 package.
 
