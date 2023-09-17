@@ -626,3 +626,9 @@ sta pre_sta.conf
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/130dfd6a-d980-4cd8-99e0-4ca26d7cd32b)
 - Following result is displayed
 - There is a slack violation
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/a033e771-31e5-4b36-b783-d37e0fc52001)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/48528ec3-a353-4809-8d67-4238ad7880fc)
+- Settinf MAX_FANOUT value to 4 reduces the slack violation.
+
