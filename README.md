@@ -23,6 +23,7 @@
 ## Day 4
 - [Timing Modelling using Delay Tables](#timing-modelling-using-delay-tables)
 - [Timing Analysis with Ideal Clocks using OpenSTA](#timing-analysis-with-ideal-clocks-using-opensta)
+- [Clock Tree Synthesis TritonCTS and Signal Integrity](#clock-tree-synthesis-tritoncts-and-signal-integrity)
 
 # Day 1
 
@@ -632,3 +633,33 @@ sta pre_sta.conf
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/48528ec3-a353-4809-8d67-4238ad7880fc)
 - Settinf MAX_FANOUT value to 4 reduces the slack violation.
 
+## Clock Tree Synthesis TritonCTS and Signal Integrity
+**Run CTS**
+- To run CTS we need to type the command
+```
+run_cts
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/29f40c8f-71de-43cb-9829-b188b7ba0c97)
+- New .v is created
+
+**Timing Analysis with Real CLocks using OpenSTA**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/9946a62e-f301-4eab-afe7-f3127d4e56b6)
+- First we type the command ```openroad```.
+- Then we read the .lef file using the command
+```
+read_lef /openLANE_flow/designs/picorv32a/runs/16-09_19-58/tmp/merged.lef
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/168b1183-65aa-4e51-ab9f-8c6e227e188c)
+- Then we read the .def file.
+```
+read_def /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/cts/picorv32a.cts.def
+```
+- We then do
+```
+write_db pico_cts.db
+read_db pico_cts.db
+read_verilog /openLANE_flow/designs/picorv32a/runs/16-09_19-58/results/synthesis/picorv32a.synthesis_cts.v
+```
