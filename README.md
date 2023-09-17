@@ -25,6 +25,9 @@
 - [Timing Analysis with Ideal Clocks using OpenSTA](#timing-analysis-with-ideal-clocks-using-opensta)
 - [Clock Tree Synthesis TritonCTS and Signal Integrity](#clock-tree-synthesis-tritoncts-and-signal-integrity)
 
+## Day 5
+- [Power Distribution Network and Routing](#power-distribution-network-and-routing) 
+
 # Day 1
 
 ## How to Talk to Computers
@@ -700,3 +703,20 @@ report_checks -path_delay min_max -format full_clock_expanded -digits 4
 report_clock_skew -hold
 report clock_skew -setup
 ```
+
+# Day 5
+## Power Distribution Network and Routing
+
+**Build Power Distribution Network**
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/02713233-6b98-4280-b70b-c54aea1d9ddb)
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/965b7342-ccfa-41ee-9798-4180265a6119)
+- To do this first we type
+```
+gen_pdn
+```
+
+![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/8467354c-875a-44e9-8ef1-f5be38bd0cc4)
+- We see that there is a change in the DEF.
+- To run the rounting we type run_routing
