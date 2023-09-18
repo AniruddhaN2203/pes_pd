@@ -719,4 +719,17 @@ gen_pdn
 
 ![image](https://github.com/AniruddhaN2203/pes_pd/assets/142299140/8467354c-875a-44e9-8ef1-f5be38bd0cc4)
 - We see that there is a change in the DEF.
-- To run the rounting we type ```run_routing```
+- To run the rounting we type ```run_routing```.
+- To check for DRC errors we need to check the 'tritonRoute.drc' folder
+- To extract the parasitics we need to use an extractor engine.
+- We use the SPEF Extraction.
+
+**SPEF Extraction**
+- To use this engine we need to go to
+```
+cd Desktop/work/tools/SPEF_Extractor
+```
+- Next we need to use this command
+```
+python3 /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-09_19-58/tmp/merged.lef /home/vsduser/Desktop/work/tools/openlane_working_dir/openlane/designs/picorv32a/runs/16-09_19-58/results/routing/picorv32a.def
+```
